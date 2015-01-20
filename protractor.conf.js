@@ -4,16 +4,29 @@ exports.config = {
     {
       'browserstack.user' : process.env.BSTACK_USER,
       'browserstack.key' : process.env.BSTACK_KEY,
-      'browserName': 'chrome'
+      'browserName' : 'Chrome',
+      'browser_version' : '38.0',
+      'os' : 'OS X',
+      'os_version' : 'Yosemite',
+      'resolution' : '1280x960'
+    },
+    {
+      'browserstack.user' : process.env.BSTACK_USER,
+      'browserstack.key' : process.env.BSTACK_KEY,
+      'browserName' : 'Firefox',
+      'browser_version' : '33.0',
+      'os' : 'OS X',
+      'os_version' : 'Yosemite',
+      'resolution' : '1280x960'
     }
   ],
-  suites: {
-    //homepage: 'test/e2e/homepage/**/*.spec.js'
-  },
+  specs: [
+    'test/e2e/**/*.spec.js'
+  ],
   jasmineNodeOpts: {
     isVerbose: true,
     showColors: true,
     defaultTimeoutInterval: 30000
   },
-  baseUrl: 'http://localhost:9000'
+  baseUrl: 'http://adambarnhard.com'
 };
